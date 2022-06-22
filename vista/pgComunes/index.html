@@ -1,0 +1,39 @@
+{% extends 'pgComunes/base.html'%}
+{% block content %}
+{{super()}}
+<div class="filtra">
+    <div class="container text-center">
+        <h2><b>FILTRADO DE CAMBIOS</b></h2>
+    </div>
+        <form action="/registrarEstado" method="post" class="formularios" enctype="multipart/form-data">
+            <div class="form-group">
+                <label class="control-label col-sm-1" for="user">Filtrado por usuario: </label>
+                <div class="col-sm-2">
+                    <select class="form-control" id="user" name="user" required>
+                        <option value="user" selected>Selecciona</option>
+                    </select>
+                </div>
+                <label class="control-label col-sm-1" for="evento">Filtrado por evento: </label>
+                <div class="col-sm-2">
+                    <select class="form-control" id="evento" name="evento" required>
+                        <option value="user" selected>Selecciona</option>
+                    </select>
+                </div>
+                <label class="control-label col-sm-1" for="dias">Filtrado por Fecha: </label>
+                <div class="col-sm-2">
+                    <label class="control-label col-sm-1" for="fechaInicio">Inicio: </label>
+                    <input class="form-control" type="date" name="fechaInicio" id="fechaInicio" 
+                        required />
+                </div>
+                <div class="col-sm-2">
+                    <label class="control-label col-sm-1" for="fechafin">Fin: </label>
+                    <input class="form-control" type="date" name="fechafin" id="fechafin" 
+                        required />
+                </div>
+            </div>
+        </form>
+</div>
+
+
+
+{%endblock content%}

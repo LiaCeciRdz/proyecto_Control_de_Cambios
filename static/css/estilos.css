@@ -1,0 +1,38 @@
+#encabezadoPrincipal {
+    background-color: #0d0d0e;
+    color: rgb(68, 64, 64);
+    padding-bottom: 0px;
+    background-color: #eaeaf1;
+  }
+  #menu {
+    /*background-color: rgb(79, 80, 74);*/
+    color: white;
+  }
+  #naveg,
+  #encabezadoPrincipal {
+    padding: 2px;
+    font-size: 20px;
+    font-family: Arial Narrow;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+.filtrado h2{
+    color: #2B4D04;
+    font-family: Arial Narrow;
+}
+
+.formularios {
+    padding: 20px;
+    padding-right: 0px;
+    width: 90%;
+    margin: auto;
+    font-family: Arial Narrow;
+    font-size: 15px;
+    color: #2B4D04;
+}
+
+.filtra{
+    background-color: white;
+    padding-bottom: 40px;
+}
