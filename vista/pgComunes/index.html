@@ -36,4 +36,43 @@
 
 
 
+<div class="page">
+    <div class="timeline">
+      <div class="timeline__group">
+        <span class="timeline__year time" aria-hidden="true">{{fs}}</span>
+        <div class="timeline__cards">
+        
+        {%for c in cambios%}    
+          {%if c['Usuario']==""%}
+          <!--En este caso se trata de un rol como mismos los servicios al realizar un cambio
+          <div class="timeline__card card">
+            <header class="card__header">
+            <time class="time" datetime="{{c['Fecha']}}">
+                <span class="time__day">{{c['Fecha']}}</span>
+            </time>
+            <h2 class="card__title r-title"><b>"{{c['Evento']}}"</b></h2>
+            </header>
+            <div class="card__content">
+            <p>En la región: <b>"{{c['Region']}}"</b>, se realizó el evento de nombre: <b>"{{c['Evento']}}"</b> por el rol: <b>"{{c['Rol']}}"</b></p>
+            </div>
+           </div>--> 
+          {%else%}
+            <div class="timeline__card card">
+                <header class="card__header">
+                <time class="time" datetime="{{c['Fecha']}}">
+                    <span class="time__day">{{c['Fecha']}}</span>
+                </time>
+                <h2 class="card__title r-title"><b>{{c['Evento']}}</b></h2>
+                </header>
+                <div class="card__content">
+                <p>En la región: <b>"{{c['Region']}}"</b>, se realizó el evento de nombre: <b>"{{c['Evento']}}"</b> por el usuario: <b>"{{c['Usuario']}}"</b></p>
+                </div>
+            </div>
+          {%endif%}
+        {%endfor%}
+    </div>
+    <span class="timeline__year time" aria-hidden="true">{{ahora}}</span>
+  </div>
+
+
 {%endblock content%}
