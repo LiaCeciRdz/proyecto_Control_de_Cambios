@@ -16,19 +16,28 @@
                 <label class="control-label col-sm-1" for="evento">Filtrado por evento: </label>
                 <div class="col-sm-2">
                     <select class="form-control" id="evento" name="evento" required>
-                        <option value="user" selected>Selecciona</option>
+                        <option value="user" selected disabled>Selecciona</option>
+                        <option value="user" >RunInstances</option>
+                        <option value="user" >RebootInstances</option>
+                        <option value="user" >StartInstances</option>
+                        <option value="user" >StopInstances</option>
+                        <option value="user" >TerminateInstances</option>
+                        <option value="user" >CreateVolume</option>
+                        <option value="user" >DeleteVolume</option>
+                        <option value="user" >AttachVolume</option>
+                        <option value="user" >DetachVolume</option>
                     </select>
                 </div>
                 <label class="control-label col-sm-1" for="dias">Filtrado por Fecha: </label>
                 <div class="col-sm-2">
                     <label class="control-label col-sm-1" for="fechaInicio">Inicio: </label>
                     <input class="form-control" type="date" name="fechaInicio" id="fechaInicio" 
-                        required />
+                        required value="{{fs}}" min="2022-06-18" max="{{ahora}}"/>
                 </div>
                 <div class="col-sm-2">
                     <label class="control-label col-sm-1" for="fechafin">Fin: </label>
                     <input class="form-control" type="date" name="fechafin" id="fechafin" 
-                        required />
+                        required value="{{ahora}}" min="2022-06-18" max="{{ahora}}"/>
                 </div>
             </div>
         </form>

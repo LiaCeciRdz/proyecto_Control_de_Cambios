@@ -1,8 +1,10 @@
+import time
 from botocore.exceptions import ClientError
 import boto3
 import time
 import csv
 import re
+
 
 params = {
     'region': 'us-west-2',
@@ -12,9 +14,9 @@ params = {
     'catalog': 'AwsDataCatalog'
 }
 
-class athena:
+class athena():
 
-    def execute_custom_query(self, query, max_execution=5):
+    def execute_custom_query(self, query, max_execution=30):
         # Ejecuto la consulta en athena y la almaceno en el bucket de S3.
         athena = boto3.client('athena', region_name=params["region"])
         execution = ''
@@ -59,6 +61,7 @@ class athena:
         s3_client = boto3.resource('s3', region_name=params["region"])
         bucket = params['bucket']
         key = '{}/{}'.format(params['path'], filename)
+        print(key)
         try:
             s3_obj = s3_client.Object(bucket, key.replace('+', ' '))
         except ClientError as e:
