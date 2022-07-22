@@ -23,17 +23,56 @@
 }
 
 .formularios {
-    padding: 20px;
-    padding-right: 0px;
-    width: 90%;
-    margin: auto;
+    /*padding: 20px;*/
+    margin-left: 5px;
+    /*width: 100%;*/
+    /*margin: auto;*/
     font-family: Arial Narrow;
     font-size: 15px;
     color: #2B4D04;
 }
 
+/*ul.filtraList li{
+  display: inline;
+  padding-right: 0.5em;
+}*/
+
+ul.filtraList {
+  list-style-type: none;
+  width: 100%;
+  margin-left: 0px;
+  
+}
+
+li.l {
+  float: left;
+  width: 25%;
+}
+
+#prm{
+  width: 25%;
+}
+
+#sec{
+  width: 31%;
+}
+
+#ult{
+  width: 44%;
+  padding: 0px;
+}
+
+
+option.category{
+  background-color: #f1f7e9;
+}
+
+form label {
+  padding-right: 0px;
+}
+
 .filtra{
-    background-color: white;
+    background-color: #e2f0d2;
     padding-bottom: 35px;
     margin: 0PX;
 }

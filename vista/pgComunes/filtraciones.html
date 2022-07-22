@@ -21,8 +21,60 @@
             <label class="control-label col-sm-1" for="evento">Filtrado por evento: </label>
             <div class="col-sm-2">
                 <select class="form-control" id="evento" name="evento"  required>
-                    <option value="" selected disabled>Selecciona</option>
-                                <option value="">Todos los eventos</option>
+                    <option value=""disabled>Selecciona</option>
+                    <option value="">Todos los eventos</option>
+                    {%for event in eventos%}
+                        {%if event == even%}
+                            <option value="{{even}}" selected>{{even}}</option>
+                        {%else%}
+                            {%if event == "EC2"%}
+                                <option value="{{event}}" class="category">{{event}}</option>
+                            {%else%}
+                                {%if event == "EBS"%}
+                                    <option value="{{event}}" class="category">{{event}}</option>
+                                {%else%}
+                                    {%if event == "IAM"%}
+                                        <option value="{{event}}" class="category">{{event}}</option>
+                                    {%else%}
+                                        {%if event == "RDS"%}
+                                            <option value="{{event}}" class="category">{{event}}</option>
+                                        {%else%}
+                                            {%if event == "S3"%}
+                                                <option value="{{event}}" class="category">{{event}}</option>
+                                            {%else%}
+                                                {%if event == "ELB"%}
+                                                    <option value="{{event}}" class="category">{{event}}</option>
+                                                {%else%}
+                                                    {%if event == "LAMBDA"%}
+                                                        <option value="{{event}}" class="category">{{event}}</option>
+                                                    {%else%}
+                                                        {%if event == "CLOUDTRAIL"%}
+                                                            <option value="{{event}}" class="category">{{event}}</option>
+                                                        {%else%}
+                                                            {%if event == "GUARDDUTTY"%}
+                                                                <option value="{{event}}" class="category">{{event}}</option>
+                                                            {%else%}
+                                                                {%if event == "VPC"%}
+                                                                    <option value="{{event}}" class="category">{{event}}</option>
+                                                                {%else%}
+                                                                    {%if event == "ROUTE53"%}
+                                                                        <option value="{{event}}" class="category">{{event}}</option>
+                                                                    {%else%}
+                                                                        <option value="{{event}}">{{event}}</option>
+                                                                    {%endif%}
+                                                                {%endif%}
+                                                            {%endif%}
+                                                        {%endif%}
+                                                    {%endif%}
+                                                {%endif%}
+                                            {%endif%}
+                                        {%endif%}
+                                    {%endif%}
+                                {%endif%}
+                            {%endif%}
+                        {%endif%}
+                    {%endfor%}
+                                <!--<option value="">Todos los eventos</option>
                                 <option value="" disabled class="category">EC2</option>
                                 <option value="RunInstances" >RunInstances</option>
                                 <option value="RebootInstances" >RebootInstances</option>
@@ -103,7 +155,7 @@
                                 <option value="FaltaModificar" >FaltaModificar</option>
                                 <option value="" disabled class="category">Route53</option>
                                 <option value="ChangeResourceRecordSets" >ChangeResourceRecordSets</option>
-                                <option value="DeleteHealthCheck" >DeleteHealthCheck</option>
+                                <option value="DeleteHealthCheck" >DeleteHealthCheck</option>-->
                 </select>
             </div>
 

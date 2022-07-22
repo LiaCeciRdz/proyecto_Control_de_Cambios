@@ -7,9 +7,9 @@ import re
 
 
 params = {
-    'region': 'us-west-2',
+    'region': 'us-east-1',
     'database': 'default',
-    'bucket': 'bucketpruebastrail',
+    'bucket': 'compucloud-clientes-logs',
     'path': 'athena/output',
     'catalog': 'AwsDataCatalog'
 }
